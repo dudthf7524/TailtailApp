@@ -27,16 +27,38 @@
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
-		<false/>
+		<true/>
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>192.168.0.3</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
 	</dict>
 
 	<key>NSBluetoothAlwaysUsageDescription</key>
 	<string>이 앱은 Bluetooth 기능을 사용하여 기기와 통신합니다.</string>
 	
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>이 앱은 Bluetooth 기능을 사용하여 기기와 통신합니다.</string>
+
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>BLE 스캔을 위해 위치 접근 권한이 필요합니다.</string>
+
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>BLE 스캔을 위해 위치 접근 권한이 필요합니다.</string>
+
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>BLE 스캔을 위해 위치 접근 권한이 필요합니다.</string>
+
+	<key>RCTNewArchitectureEnabled</key>
+	<false/>
 
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
@@ -54,5 +76,12 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>React Native needs to access your local network to connect to the development server</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_metro._tcp</string>
+	</array>
 </dict>
 </plist>
